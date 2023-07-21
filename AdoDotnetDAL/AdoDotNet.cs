@@ -74,8 +74,8 @@ namespace AdoDotnetDAL
             dr = objCommand.ExecuteReader();
             List<ICustomer> custs = new List<ICustomer>();
             while (dr.Read())
-            {
-                ICustomer icust = Factory<ICustomer>.Create("Customer");
+             {
+                ICustomer icust  = Factory<ICustomer>.Create("Customer");
                 icust.CustomerName = dr["CustomerName"].ToString();
                 icust.BillDate = Convert.ToDateTime(dr["BillDate"]);
                 icust.BillAmount = Convert.ToDecimal(dr["BillAmount"]);
